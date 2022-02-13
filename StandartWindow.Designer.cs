@@ -22,6 +22,11 @@ namespace VPN_Unlimited_parody
             base.Dispose(disposing);
         }
 
+        ~StandartWindow()
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -139,9 +144,11 @@ namespace VPN_Unlimited_parody
 
         private System.Windows.Forms.PictureBox mainIco;
         private System.Windows.Forms.Panel simpleWhitePanel;
+
         protected System.Windows.Forms.Button cancelButton;
         protected System.Windows.Forms.Button nextButton;
         protected System.Windows.Forms.Button backButton;
+
         protected System.Windows.Forms.Label tabDescriptionLabel;
         protected System.Windows.Forms.Label tabTitleLabel;
     }

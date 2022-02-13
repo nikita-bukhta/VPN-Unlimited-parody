@@ -12,13 +12,19 @@ namespace VPN_Unlimited_parody
 {
     public partial class StandartWindow : Form
     {
+        static protected readonly System.Windows.Forms.Form[] _allTabs = {
+            new LicenseAgreementForm(),
+            new InstallLocationForm()
+        };
+        static protected byte _currentTabNumber = 0;
+
         public StandartWindow()
         {
             InitializeComponent();
         }
         
         // Before we close the window, ask customer, if he/she really want it;
-        private protected virtual void cancelButton_Click(object sender, EventArgs e)
+        private protected void cancelButton_Click(object sender, EventArgs e)
         {
             string warningMessage = "Setun is not complete.If you exit now, the program will not be installed.\n\n" +
                 "You may run Setup again at another time to complete the installation.\n\nExit Setup?";
@@ -26,11 +32,27 @@ namespace VPN_Unlimited_parody
             var result = MessageBox.Show(warningMessage, "Exit Setup", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
-                Environment.Exit(0);
+                Application.Exit();
         }
 
-        private protected virtual void nextButton_Click(object sender, EventArgs e) { }
+        private protected void OpenNextWindow(StandartWindow newWindow) => newWindow.Show();
 
-        private protected virtual void backButton_Click(object sender, EventArgs e) { }
+        private protected void backButton_Click(object sender, EventArgs e) 
+        { 
+            if (_currentTabNumber > 0)
+            {
+                this.Hide();
+                _allTabs[--_currentTabNumber].Show();
+            }
+        }
+
+        private protected void nextButton_Click(object sender, EventArgs e) 
+        {
+            if ((_currentTabNumber + 1) < _allTabs.Length)
+            {
+                this.Hide();
+                _allTabs[++_currentTabNumber].Show();
+            }
+        }
     }
 }
