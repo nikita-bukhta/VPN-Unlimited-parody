@@ -22,7 +22,7 @@ namespace VPN_Unlimited_parody
             FolderBrowserDialog link = new FolderBrowserDialog();
 
             if (link.ShowDialog() == DialogResult.OK)
-                browseLinkBox.Text = link.SelectedPath;
+                browseLinkBox.Text = link.SelectedPath + "\\VPN Unlimited";
         }
     }
 }
