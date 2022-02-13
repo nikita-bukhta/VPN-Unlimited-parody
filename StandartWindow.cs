@@ -12,11 +12,24 @@ namespace VPN_Unlimited_parody
 {
     public partial class StandartWindow : Form
     {
+        protected struct Settings
+        {
+            public string installDir;
+            public string appName;
+
+            public bool desktopShortcut;
+        }
+
         static protected readonly System.Windows.Forms.Form[] _allTabs = {
             new LicenseAgreementForm(),
-            new InstallLocationForm()
+            new InstallLocationForm(),
+            new InstallShortcutLocationForm(),
+            new AdditionalTaskForm(),
+            new ConclusionForm()
         };
         static protected byte _currentTabNumber = 0;
+
+        static protected Settings _settings = new Settings();
 
         public StandartWindow()
         {

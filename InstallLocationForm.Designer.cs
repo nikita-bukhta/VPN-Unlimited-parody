@@ -31,10 +31,10 @@ namespace VPN_Unlimited_parody
         {
             this.chooseInstallLocationButton = new System.Windows.Forms.Button();
             this.browseLinkBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.someNiceImg = new System.Windows.Forms.PictureBox();
             this.warningSetupLabel = new System.Windows.Forms.Label();
             this.informToChooseDirLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.someNiceImg)).BeginInit();
             this.SuspendLayout();
             // 
             // tabDescriptionLabel
@@ -64,16 +64,17 @@ namespace VPN_Unlimited_parody
             this.browseLinkBox.Size = new System.Drawing.Size(352, 20);
             this.browseLinkBox.TabIndex = 6;
             this.browseLinkBox.Text = "C:\\Program Files (x86)\\VPN Unlimited";
+            _settings.installDir = this.browseLinkBox.Text;
             // 
-            // pictureBox1
+            // someNiceImg
             // 
-            this.pictureBox1.Image = global::VPN_Unlimited_parody.Properties.Resources.folder;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.someNiceImg.Image = global::VPN_Unlimited_parody.Properties.Resources.folder;
+            this.someNiceImg.Location = new System.Drawing.Point(30, 71);
+            this.someNiceImg.Name = "someNiceImg";
+            this.someNiceImg.Size = new System.Drawing.Size(40, 40);
+            this.someNiceImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.someNiceImg.TabIndex = 7;
+            this.someNiceImg.TabStop = false;
             // 
             // warningSetupLabel
             // 
@@ -101,7 +102,7 @@ namespace VPN_Unlimited_parody
             this.ClientSize = new System.Drawing.Size(484, 351);
             this.Controls.Add(this.informToChooseDirLabel);
             this.Controls.Add(this.warningSetupLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.someNiceImg);
             this.Controls.Add(this.browseLinkBox);
             this.Controls.Add(this.chooseInstallLocationButton);
             this.Name = "InstallLocationForm";
@@ -110,10 +111,10 @@ namespace VPN_Unlimited_parody
             this.Controls.SetChildIndex(this.backButton, 0);
             this.Controls.SetChildIndex(this.chooseInstallLocationButton, 0);
             this.Controls.SetChildIndex(this.browseLinkBox, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.someNiceImg, 0);
             this.Controls.SetChildIndex(this.warningSetupLabel, 0);
             this.Controls.SetChildIndex(this.informToChooseDirLabel, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.someNiceImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,9 +122,9 @@ namespace VPN_Unlimited_parody
 
         #endregion
         private System.Windows.Forms.Button chooseInstallLocationButton;
-        private System.Windows.Forms.TextBox browseLinkBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label warningSetupLabel;
-        private System.Windows.Forms.Label informToChooseDirLabel;
+        protected System.Windows.Forms.TextBox browseLinkBox;
+        protected System.Windows.Forms.PictureBox someNiceImg;
+        protected System.Windows.Forms.Label warningSetupLabel;
+        protected System.Windows.Forms.Label informToChooseDirLabel;
     }
 }

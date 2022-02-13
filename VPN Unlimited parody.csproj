@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionalTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalTaskForm.Designer.cs">
+      <DependentUpon>AdditionalTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConclusionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConclusionForm.Designer.cs">
+      <DependentUpon>ConclusionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstallLocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InstallLocationForm.Designer.cs">
       <DependentUpon>InstallLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallShortcutLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallShortcutLocationForm.Designer.cs">
+      <DependentUpon>InstallShortcutLocationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StandartWindow.cs">
       <SubType>Form</SubType>
@@ -67,8 +85,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdditionalTaskForm.resx">
+      <DependentUpon>AdditionalTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConclusionForm.resx">
+      <DependentUpon>ConclusionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InstallLocationForm.resx">
       <DependentUpon>InstallLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallShortcutLocationForm.resx">
+      <DependentUpon>InstallShortcutLocationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseAgreementForm.resx">
       <DependentUpon>LicenseAgreementForm.cs</DependentUpon>
@@ -104,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\folder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\shortcuts.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
