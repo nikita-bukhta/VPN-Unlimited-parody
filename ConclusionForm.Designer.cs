@@ -40,9 +40,9 @@ namespace VPN_Unlimited_parody
             this.conclusionBox.Size = new System.Drawing.Size(442, 158);
             this.conclusionBox.TabIndex = 5;
 
-            conclusionBox.Text = "Destination location:\n\t" + _settings.installDir +
-                "\n\nStart menu folder:\n\t" + _settings.appName +
-                "\n\nAdditional tasks:\n\tAdditional shortcuts:\n\t\t";
+            conclusionBox.Text = "Destination location:\r\n\t" + _settings.installDir +
+                "\r\n\nStart menu folder:\r\n\t" + _settings.appName +
+                "\r\n\nAdditional tasks:\r\n\tAdditional shortcuts:\r\n\t\t";
 
             if (_settings.desktopShortcut)
                 conclusionBox.Text += "Create a desktop shortcut";

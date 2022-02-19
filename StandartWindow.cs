@@ -67,5 +67,10 @@ namespace VPN_Unlimited_parody
                 _allTabs[++_currentTabNumber].Show();
             }
         }
+
+        private void StandartWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

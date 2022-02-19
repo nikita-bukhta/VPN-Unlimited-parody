@@ -133,6 +133,7 @@ namespace VPN_Unlimited_parody
             this.Name = "StandartWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup - VPN Unlimited";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StandartWindow_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.mainIco)).EndInit();
             this.simpleWhitePanel.ResumeLayout(false);
             this.simpleWhitePanel.PerformLayout();
